@@ -5,18 +5,17 @@
   <div class="container">
     <h1>All Lists</h1>
     <p>Create a list of bookmarked movies!</p>
-    <p class="">
-      <%= link_to 'Create a list', lists_new_path %>
+      <%= link_to 'Create a list', lists_new_path, class: "btn btn-primary" %>
     </p>
   </div>
 </div>
 
-<h1></h1>
-<%= link_to 'Create a list', lists_new_path %>
-
-
-<ul>
-  <% @lists.each do |list| %>
-    <li> <%= link_to list.name, list_path(list) %> </li>
-  <% end %>
-</ul>
+<div class="cards">
+  <ul class="list-inline">
+    <% @lists.each do |list| %>
+      <div class="card-category">
+        <li class="list-inline-item"> <%= link_to list.name, list_path(list) %> </li>
+      </div>
+    <% end %>
+  </ul>
+</div>

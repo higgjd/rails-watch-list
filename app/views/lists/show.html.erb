@@ -5,6 +5,7 @@
 <ul>
   <% @list.bookmarks.each do |bookmark| %>
     <li> <%=  bookmark.movie.title %><br>
+      <%# <%= cl_image_tag bookmark.photo.key %>
       <%= link_to "Remove",
         bookmark_path(bookmark),
         method: :delete,

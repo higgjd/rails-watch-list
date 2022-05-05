@@ -1,2 +1,14 @@
-<h1>Lists#new</h1>
-<p>Find me in app/views/lists/new.html.erb</p>
+
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-6">
+      <h1 class="text-center">Create a list</h1>
+      <%= simple_form_for(@list) do |l| %>
+        <%= l.label :name %>
+        <%= l.text_field :name %>
+        <%= l.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
